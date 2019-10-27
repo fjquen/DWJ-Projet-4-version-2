@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width">
   <title><?= $title ?></title>
-  <meta name="Billet simple pour Alaska" content="Bienvenue sur mon site qui raconte mon voyage en Alaska grâce à des chapitres que je publie sur le web." />
-<!-- Bootstrap core CSS -->
+  <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="public/css/blog-post.css" rel="stylesheet">
-  <link rel="icon" href="public/images/icon-2727224_960_720.png" />
+  <link rel="icon" href="public/images/icon-2727224_960_720" />
   <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js' referrerpolicy="origin"></script>
   <script>
 // on modal show, focus the editor
@@ -62,6 +61,7 @@
 
     });
   </script>
+    
 <script src='https://www.google.com/recaptcha/api.js' async defer ></script>
 </head>
 
@@ -75,9 +75,9 @@
     <div class="container">
 
       <?php if (empty($_SESSION['pseudoAdmin'])) {
-        echo '<a class="navbar-brand" href="/">Blog Jean Fortoche</a>';
+        echo '<a class="navbar-brand" href="http://blogjeanfortoche.franceserv.com/">Blog Jean Fortoche</a>';
       } else {
-        echo '<a class="navbar-brand" href="/">  Bonjour ' . $_SESSION['pseudoAdmin'] . '</a>';
+        echo '<a class="navbar-brand" href="http://blogjeanfortoche.franceserv.com/">  Bonjour ' . $_SESSION['pseudoAdmin'] . '</a>';
       } ?>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -86,7 +86,7 @@
         <ul class="navbar-nav ml-auto">
 
           <?php if (empty($_SESSION['pseudoAdmin'])) {
-            echo '<li class="nav-item active"><a class="nav-link" href="/">Accueil
+            echo '<li class="nav-item active"><a class="nav-link" href="http://blogjeanfortoche.franceserv.com/">Accueil
                 <span class="sr-only">(current)</span></a></li>';
           } else {
             echo '
@@ -125,8 +125,9 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="public/js/ErrorPostComment.js"></script>
   <script src="public/js/ErrorPostCreateUpdate.js"></script>
-  <script src="public/js/ErrorPassword.js"></script>
+  <script src="public/js/CaptchaResponsive.js"></script>
   <script src="public/js/main.js"></script>
+    
 </body>
 
 </html>
