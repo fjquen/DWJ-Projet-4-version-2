@@ -2,4 +2,4 @@ var myErrorPostComment = new ErrorPostComment();
 
 var myErrorPostCreateUpdate = new ErrorPostCreateUpdate();
 
-var myErrorPassword = new ErrorPassword();
+var myCaptchaResponsive = new CaptchaResponsive();
