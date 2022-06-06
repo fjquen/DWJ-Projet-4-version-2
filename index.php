@@ -16,7 +16,7 @@ spl_autoload_register(function (string $className) {
     }
 });
 
-$connection = new Connection('mysql:host=localhost;dbname=****;charset=utf8', '*****', '');
+$connection = new Connection('mysql:host=localhost;dbname=******;charset=utf8', '*****', '');
 
 $controller = $_REQUEST['controller'] ?? 'billet';
 $action = $_REQUEST['action'] ?? 'indexBillets';

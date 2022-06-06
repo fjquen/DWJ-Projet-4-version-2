@@ -75,9 +75,9 @@
     <div class="container">
 
       <?php if (empty($_SESSION['pseudoAdmin'])) {
-        echo '<a class="navbar-brand" href="http://blogjeanfortoche.franceserv.com/">Blog Jean Fortoche</a>';
+        echo '<a class="navbar-brand" href="index.php">Blog Jean Fortoche</a>';
       } else {
-        echo '<a class="navbar-brand" href="http://blogjeanfortoche.franceserv.com/">  Bonjour ' . $_SESSION['pseudoAdmin'] . '</a>';
+        echo '<a class="navbar-brand" href="index.php">  Bonjour ' . $_SESSION['pseudoAdmin'] . '</a>';
       } ?>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -86,7 +86,7 @@
         <ul class="navbar-nav ml-auto">
 
           <?php if (empty($_SESSION['pseudoAdmin'])) {
-            echo '<li class="nav-item active"><a class="nav-link" href="http://blogjeanfortoche.franceserv.com/">Accueil
+            echo '<li class="nav-item active"><a class="nav-link" href="index.php">Accueil
                 <span class="sr-only">(current)</span></a></li>';
           } else {
             echo '
