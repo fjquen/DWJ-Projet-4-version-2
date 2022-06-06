@@ -45,9 +45,19 @@
         <label for="commentaire" class="mt-2">Commentaire :</label>
         <textarea class="form-control" rows="3" id="commentaire" name="commentaire" placeholder="Votre commentaire ici."></textarea>
       </div>
-      <div class="g-recaptcha" data-sitekey="6LeVc74UAAAAAOYgy9QF7w4QuqMN5ygk_J3iVvOd"></div>
+      <div class="d-flex flex-column mb-3">
+      <label>Entrer le texte dans l'image</label>
+      <div class="mb-3">
+         <?php echo '<img src="Views/captcha.php" style="vertical-align: middle;"/>'?>
+      </div>
+      <div class="w-25 mb-3">
+         <input name="captcha" type="text">
+      </div>
+      <div class="w-25 mb-3">
       <button id="submitComment" type="submit" class="btn btn-primary">Poster</button>
-
+      </div>
+      
+      </div>
     </form>
   </div>
 

@@ -43,24 +43,18 @@ class FrontEnd
         $idBillet = $_GET["idBillet"];
         $pseudo = $_POST["pseudo"];
         $commentaire = $_POST["commentaire"];
-        $secretKey = "6LeVc74UAAAAAJofKaxwWA765BPaoxJIBRzQBLmh";
-        $ip = $_SERVER['REMOTE_ADDR'];
-        // post request to server
-        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($_POST['g-recaptcha-response']);
-        $response = file_get_contents($url);
-        $responseKeys = json_decode($response,true);
-        if (empty($pseudo) || empty($commentaire) || empty($_POST['g-recaptcha-response'])) {
+       
+        if (empty($pseudo) || empty($commentaire)) {
 
             return $this->afficheBilletSimple();
-           
-   
-
             
-        } elseif($responseKeys["success"]) {
+        } else if(isset($_POST["captcha"])&&$_POST["captcha"]!=""&&$_SESSION["code"]==$_POST["captcha"]) {
             $this->commentRepository->addCommentsbyIdBillet($idBillet, $pseudo, $commentaire);
 
             header('Location: index.php?controller=billet&action=afficheBilletSimple&idBillet=' . $idBillet . '#pseudo');
          
+        }else{
+            return $this->afficheBilletSimple();
         }
     }
 
